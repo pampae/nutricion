@@ -59,8 +59,8 @@
                              <th scope="row"><?php echo $fila['localidad']?></th>
                              <th scope="row"><?php echo $fila['talla']?></th>
                              <th scope="row">
-                                <a href="forms/EditarDato.php?id=<?php echo $fila['id']?>" class="btn btn-warning">editar</a>
-                                <a href="CRUD/EliminarDato.php?id=<?php echo $fila['id']?>"class="btn btn-danger">eliminar</a>
+                                <a href="forms/EditarDato.php?id_paciente=<?php echo $fila['id_paciente']?>" class="btn btn-warning">editar</a>
+                                <a href="CRUD/EliminarDato.php?id_paciente=<?php echo $fila['id_paciente']?>"class="btn btn-danger">eliminar</a>
                              </th>
 
                         </tr>

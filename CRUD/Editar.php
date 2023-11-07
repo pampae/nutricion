@@ -1,8 +1,8 @@
 <?php
 
-    $include_once("../config/conexion.php");
+    include_once("../config/conexion.php");
 
-    $id = $_POST['id'];
+    $id_paciente = $_POST['id_paciente'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $dni = $_POST['dni'];
@@ -11,8 +11,8 @@
     $localidad = $_POST['localidad'];
     $talla= $_POST['talla'];
     
-    $sql = "UPDATE paciente SET nombre='$nombre, apellido='$apellido', dni='$dni', 
-    os='$os', tel='$tel', localidad='$localidad', talla='$talla' WHERE id='$id'";
+    $sql = "UPDATE pacientes SET nombre='$nombre', apellido='$apellido', dni='$dni', 
+    os='$os', tel='$tel', localidad='$localidad', talla='$talla' WHERE id_paciente='$id_paciente'";
 
     $query = mysqli_query($conexion, $sql);
 

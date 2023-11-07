@@ -1,10 +1,10 @@
 <?php
     include_once('../config/conexion.php');
-    $id = $_REQUEST['id'];
+    $id_paciente = $_REQUEST['id_paciente'];
 
-    $sql = "SELECT * FROM paciente WHERE id = '$id'";
+    $sql = "SELECT * FROM pacientes WHERE id_paciente = '$id_paciente'";
     $query = mysqli_query($conexion, $sql);
-    $fila = maysqli_fetch_array($query);
+    $fila = mysqli_fetch_array($query);
 ?>
 
 <!doctype html>
@@ -27,7 +27,7 @@
     <br>
  <div class="container">
  <form action="../CRUD/Editar.php" method="POST">
-    <input type="hidden" name="id" value="<?php echo $fila['id']?>">
+    <input type="hidden" name="id_paciente" value="<?php echo $fila['id_paciente']?>">
    <div class="mb-3">
         <label class="form-label">nombre</label>
        <input type="text" class="form-control" placeholder="nombre"name="nombre" value="<?php echo $fila['nombre']?>">
