@@ -1,9 +1,9 @@
 <?php
-    include_once('..conexion.php');
+    include_once('../config/conexion.php');
 
-    $id =$_REQUEST['id'];
-    $sql = "DELETE FROM paciente WHERE id ='$id'";
-    $query = mysqli_query($conextion, $sql);
+    $id_paciente =$_REQUEST['id_paciente'];
+    $sql = "DELETE FROM pacientes WHERE id_paciente ='$id_paciente'";
+    $query = mysqli_query($conexion, $sql);
 
     if ($query) {
         header('location: ../index.php');

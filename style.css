@@ -1,0 +1,39 @@
+:root[data-theme="dark"]{
+
+    --color-background-image: url(img/fondo-claro.avif); 
+    --color-moon-sun:rgb(244, 208, 63);
+}
+
+:root{
+    --color-background-image: url(img/fondo-claro.jpg);
+    --color-moon-sun:rgb(46, 134, 193);
+}
+
+/*boton claro oscuro*/
+.light-mode-btn,
+.dark-mode-btn{
+    color: var(--color-moon-sun);
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 22px;
+    margin-right: 20px;
+}
+:root[data-theme="light"] .dark-mode-btn {
+    display: none;
+}
+:root[data-theme="dark"] .light-mode-btn {
+    display: none;
+}
+
+
+body {
+    background-image: var(--color-background-image);
+}
+
+h1 {
+    color: #030303;
+}
+
